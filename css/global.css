@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --Primary: #072ac8;
+  --PrimaryLight: #a2d6f9;
+  --PrimaryLighter: #d1edff;
+  --SecondaryLight: #fce300;
+  --SecondaryDark: #ffc600;
+  --NeutralLight: #f4f6fc;
+  --NeutralMedium: #6b708d;
+  --NeutralDark: #292e47;
+  --Wrong: #b33a3a;
+  --Right: #28a428;
+  --White: #fff;
+  --Black: #000;
+  --Background: #f2f4fc;
+}
+
+html,
+body {
+  text-align: center;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  background: var(--Background);
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--NeutralMedium);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--NeutralDark);
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 20px;
+  color: var(--NeutralDark);
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+h4 {
+  font-size: 24px;
+  color: var(--NeutralDark);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.page-not-found {
+  font-size: 3em;
+  margin-top: 100px;
+  color: var(--NeutralMedium);
+}
+
+/* --- Scroll button --- */
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--Primary);
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: none;
+}
+
+.scroll-top:hover {
+  transform: scale(1.1);
+}
